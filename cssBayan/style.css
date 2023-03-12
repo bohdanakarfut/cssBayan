@@ -21,8 +21,6 @@ h1 {
     text-align: center;
 }
 
-
-
 .bayan-item {
     position: relative;
     border-top: 0.1rem solid gray;
@@ -66,11 +64,24 @@ img {
     width: 100%;  
 }
 
+input:checked ~ .header img {
+    transform: rotateZ(45deg);
+    transition: all .3s;
+}
+
+input:checked ~ .header p {
+    color: darkslategray;
+}
+
 .bayan-item-input:checked ~ .bayan-item-trigger{
     
 }
+
 .bayan-item-input:checked ~ .bayan-item-content{
     display: block;
+}
+.bayan-item-input:checked ~ p{
+    color: darkslategray;
 }
 
 .wraper:hover .header img {
@@ -79,5 +90,36 @@ img {
 
 .wraper:hover p {
     color: darkslategray
+}
 
+@media (min-width: 820px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .bayan-item {
+        font-size: 1.8rem;
+    }
+
+    .header img {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    h1 {
+        font-size: 5rem;
+    }
+    .bayan-item {
+        font-size: 3.8rem;
+    }
+
+    .header img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .header {
+        height: 4.5rem;
+    }
 }
